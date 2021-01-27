@@ -9,14 +9,21 @@ const rl = readline.createInterface({
   prompt: "BANG BANG> ",
 });
 
+// Show header
+
+// Display prompt
 rl.prompt();
 
+// Read input
 rl.on("line", (line) => {
   switch (line.toLowerCase().trim()) {
     case "spis ild":
       const index = Math.floor(Math.random() * quotes.length);
       const quote = quotes[index];
-      console.log(quote);
+      console.log(quote + "\n");
+      break;
+    case "slesvig?":
+      rl.emit("close", "Slesvig?");
       break;
     default:
       console.log(
@@ -27,7 +34,11 @@ rl.on("line", (line) => {
   rl.prompt();
 });
 
-rl.on("close", () => {
-  console.log("Slesvig? Det tror jeg nok vi gør!");
+// Handle close
+rl.on("close", (args) => {
+  if (!args) {
+    console.log("Slesvig?");
+  }
+  console.log("Det tror jeg nok vi gør!");
   process.exit(0);
 });
