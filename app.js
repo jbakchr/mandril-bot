@@ -2,6 +2,8 @@ const readline = require("readline");
 
 const quotes = require("./data/quotes.json");
 
+const HEADER_TEXT = "* MANDRIL CLI *";
+
 // Create interface
 const rl = readline.createInterface({
   input: process.stdin,
@@ -9,7 +11,8 @@ const rl = readline.createInterface({
   prompt: "BANG BANG> ",
 });
 
-// Show header
+// Print header
+printHeader();
 
 // Display prompt
 rl.prompt();
@@ -27,7 +30,7 @@ rl.on("line", (line) => {
       break;
     default:
       console.log(
-        "Nu går det MEGET hurtigt, der ville jeg godt lige ha' haft LIDT mere forberedelsesti-id."
+        "Nu går det MEGET hurtigt, der ville jeg godt lige ha' haft LIDT mere forberedelsesti-id..\n"
       );
       break;
   }
@@ -42,3 +45,18 @@ rl.on("close", (args) => {
   console.log("Det tror jeg nok vi gør!");
   process.exit(0);
 });
+
+function printHeader() {
+  printStars();
+  console.log(HEADER_TEXT);
+  printStars();
+  console.log();
+}
+
+function printStars() {
+  let stars = "";
+  for (let i = 0; i < HEADER_TEXT.length; i++) {
+    stars += "*";
+  }
+  console.log(stars);
+}
