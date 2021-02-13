@@ -18,7 +18,9 @@ Node.js
 ```
 
 Git kan hentes her: https://git-scm.com/
+
 Node.js kan hentes her: https://nodejs.org/en/
+
 (bare sig "jæs, jæs" til al ting under installationen ..)
 
 ### Klon projektet
