@@ -12,7 +12,7 @@ const rl = readline.createInterface({
   prompt: "BANG BANG> ",
 });
 
-// Start "bot"
+// Init "bot"
 printBox(START_HEADER_TEXT);
 rl.prompt();
 
@@ -46,6 +46,7 @@ rl.on("close", (args) => {
   process.exit(0);
 });
 
+// Prints boxes
 function printBox(text) {
   printStars(text);
   console.log(text);
