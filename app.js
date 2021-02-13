@@ -2,7 +2,8 @@ const readline = require("readline");
 
 const quotes = require("./data/quotes.json");
 
-const HEADER_TEXT = "* MANDRIL CLI *";
+const START_HEADER_TEXT = "!! MANDRIL BOT !!";
+const END_HEADER_TEXT = "!! THE END (kan du så forstå det, Marianne ..) !!";
 
 // Create interface
 const rl = readline.createInterface({
@@ -11,10 +12,8 @@ const rl = readline.createInterface({
   prompt: "BANG BANG> ",
 });
 
-// Print header
-printHeader();
-
-// Display prompt
+// Start "bot"
+printBox(START_HEADER_TEXT);
 rl.prompt();
 
 // Read input
@@ -42,20 +41,21 @@ rl.on("close", (args) => {
   if (!args) {
     console.log("Slesvig?");
   }
-  console.log("Det tror jeg nok vi gør!");
+  console.log("Det tror jeg nok vi gør!\n");
+  printBox(END_HEADER_TEXT);
   process.exit(0);
 });
 
-function printHeader() {
-  printStars();
-  console.log(HEADER_TEXT);
-  printStars();
+function printBox(text) {
+  printStars(text);
+  console.log(text);
+  printStars(text);
   console.log();
 }
 
-function printStars() {
+function printStars(text) {
   let stars = "";
-  for (let i = 0; i < HEADER_TEXT.length; i++) {
+  for (let i = 0; i < text.length; i++) {
     stars += "*";
   }
   console.log(stars);
