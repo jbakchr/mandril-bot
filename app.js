@@ -12,7 +12,7 @@ const rl = readline.createInterface({
   prompt: "BANG BANG> ",
 });
 
-// Init "bot"
+// Init crazy AI Mandril "bot" .. lol
 printBox(START_HEADER_TEXT);
 rl.prompt();
 
