@@ -17,7 +17,7 @@ Git
 Node.js
 ```
 
-#### Links til software
+#### _Links til software_
 
 Git kan hentes her: https://git-scm.com/
 
