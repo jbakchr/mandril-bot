@@ -13,11 +13,13 @@ Følg denne vejledning for at få denne 'bot' op at køre ..
 For at kunne køre denne 'bot' skal du have følgende software installeret
 
 ```
-git
+Git
 Node.js
 ```
 
-Node.js kan hentes her: https://nodejs.org/en/ (bare sig "jæs, jæs" til al ting under installationen ..)
+Git kan hentes her: https://git-scm.com/
+Node.js kan hentes her: https://nodejs.org/en/
+(bare sig "jæs, jæs" til al ting under installationen ..)
 
 ### Klon projektet
 
@@ -46,3 +48,9 @@ node app.js
 ## THE END
 
 Av for helvede .. jeg brænder mig på ilden!
+
+## Ophavsmand
+
+Tossen bag dette makværk er ..
+
+- Jonas Bak Phillipson
